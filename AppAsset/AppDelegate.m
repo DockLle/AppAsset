@@ -22,6 +22,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    NSLog(@"真你诶");
+    
     [self for3DTouch];
     
     return YES;
