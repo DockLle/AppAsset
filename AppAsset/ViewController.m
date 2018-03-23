@@ -100,6 +100,11 @@ static NSString *cellID = @"EVE";
             [self performSegueWithIdentifier:@"pushForCorner" sender:@(indexPath.row)];
         }
             break;
+        case 10:
+        {
+            [[RootObject shareRootObject] openSafari];
+        }
+            break;
         default:
             break;
     }
@@ -122,7 +127,8 @@ static NSString *cellID = @"EVE";
                                 @"画板（手写签名等）",
                                 @"后台播放音乐并在系统控制中心显示",
                                 @"获取通讯录",
-                                @"自由圆角"]];
+                                @"自由圆角",
+                                @"应用内使用Safari"]];
     }
     return _titleArray;
 }

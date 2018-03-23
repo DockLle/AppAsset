@@ -13,10 +13,11 @@
 @import StoreKit;
 @import LocalAuthentication;
 @import CallKit;
+@import SafariServices;
 
 static RootObject *defaultObject;
 
-@interface RootObject()<SKStoreProductViewControllerDelegate,CXProviderDelegate>
+@interface RootObject()<SKStoreProductViewControllerDelegate,CXProviderDelegate,SFSafariViewControllerDelegate>
 
 @property (nonatomic,strong) CXProvider *provider NS_AVAILABLE_IOS(10.0);
 
@@ -180,4 +181,67 @@ static RootObject *defaultObject;
     ContactsController *vc = [[ContactsController alloc] init];
     [[[CommonTool shareTool] getCurrentVC] showViewController:vc sender:nil];
 }
+
+
+#pragma mark - 打开Safari
+
+- (void)openSafari
+{
+    NSURL *url = [NSURL URLWithString:@"https://www.jianshu.com/p/37784e363b8a"];
+    SFSafariViewController *safari;
+    if (@available(iOS 11.0, *)) {
+        SFSafariViewControllerConfiguration *config = [[SFSafariViewControllerConfiguration alloc] init];
+        config.entersReaderIfAvailable = NO;//如果网页是支持阅读器的是否默认进入阅读器
+        config.barCollapsingEnabled = YES;//导航栏是否可折叠
+        safari = [[SFSafariViewController alloc] initWithURL:url configuration:config];
+        safari.dismissButtonStyle = SFSafariViewControllerDismissButtonStyleClose;//返回按钮类型
+        
+    } else {
+        // Fallback on earlier versions
+        safari = [[SFSafariViewController alloc] initWithURL:url entersReaderIfAvailable:NO];
+    }
+    
+    
+    if (@available(iOS 10.0, *)) {
+        safari.preferredBarTintColor = [UIColor purpleColor]; //导航栏背景色
+        safari.preferredControlTintColor = [UIColor orangeColor];//导航栏上可用按钮的颜色
+    }
+    
+    safari.delegate = self;
+    
+    //推荐使用
+    [[[CommonTool shareTool] getCurrentVC] presentViewController:safari animated:YES completion:^{
+        
+    }];;
+    
+}
+
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller
+{
+    NSLog(@"点击返回按钮");
+}
+
+- (void)safariViewController:(SFSafariViewController *)controller didCompleteInitialLoad:(BOOL)didLoadSuccessfully
+{
+    NSLog(@"完成初始化加载");
+}
+
+- (void)safariViewController:(SFSafariViewController *)controller initialLoadDidRedirectToURL:(NSURL *)URL
+{
+    NSLog(@"牛犊");
+}
+
+- (NSArray<UIActivity *> *)safariViewController:(SFSafariViewController *)controller activityItemsForURL:(NSURL *)URL title:(NSString *)title
+{
+    NSLog(@"分享按钮被点击");
+    //添加一组 uiactivity 到 即将出现的 uiactivityviewcontroller
+    return @[];
+}
+
+- (NSArray<UIActivityType> *)safariViewController:(SFSafariViewController *)controller excludedActivityTypesForURL:(NSURL *)URL title:(NSString *)title NS_AVAILABLE_IOS(11.0)
+{
+    NSLog(@"排除一些分享");
+    return @[UIActivityTypeMessage];
+}
+
 @end

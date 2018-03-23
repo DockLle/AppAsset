@@ -47,4 +47,10 @@
  打开通讯录
  */
 - (void)openContacts;
+
+
+/**
+ 应用内打开safari
+ */
+- (void)openSafari;
 @end

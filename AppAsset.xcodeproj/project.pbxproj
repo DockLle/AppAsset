@@ -31,6 +31,7 @@
 		ED64C385205F69AE00C0BB2A /* RootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64C384205F69AE00C0BB2A /* RootObject.m */; };
 		ED64C388205F8ACA00C0BB2A /* CommonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64C387205F8ACA00C0BB2A /* CommonTool.m */; };
 		ED64C38C205FA26F00C0BB2A /* BallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64C38B205FA26F00C0BB2A /* BallViewController.m */; };
+		ED6DCF612064932800699746 /* VedioToolBoxVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6DCF602064932800699746 /* VedioToolBoxVC.m */; };
 		EDA98CEC2061F78B005226B5 /* ContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA98CEB2061F78B005226B5 /* ContactsController.m */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,8 @@
 		ED64C387205F8ACA00C0BB2A /* CommonTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonTool.m; sourceTree = "<group>"; };
 		ED64C38A205FA26F00C0BB2A /* BallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BallViewController.h; sourceTree = "<group>"; };
 		ED64C38B205FA26F00C0BB2A /* BallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BallViewController.m; sourceTree = "<group>"; };
+		ED6DCF5F2064932800699746 /* VedioToolBoxVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VedioToolBoxVC.h; sourceTree = "<group>"; };
+		ED6DCF602064932800699746 /* VedioToolBoxVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VedioToolBoxVC.m; sourceTree = "<group>"; };
 		EDA98CEA2061F78B005226B5 /* ContactsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsController.h; sourceTree = "<group>"; };
 		EDA98CEB2061F78B005226B5 /* ContactsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,6 +226,8 @@
 				EDA98CEB2061F78B005226B5 /* ContactsController.m */,
 				ED1EAF1E2063574800DC93FC /* CornerVC.h */,
 				ED1EAF1F2063574800DC93FC /* CornerVC.m */,
+				ED6DCF5F2064932800699746 /* VedioToolBoxVC.h */,
+				ED6DCF602064932800699746 /* VedioToolBoxVC.m */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				ED1EAF202063574800DC93FC /* CornerVC.m in Sources */,
 				ED2377FF2060B44100477997 /* WebRTCHelper.m in Sources */,
 				EDA98CEC2061F78B005226B5 /* ContactsController.m in Sources */,
+				ED6DCF612064932800699746 /* VedioToolBoxVC.m in Sources */,
 				ED64C385205F69AE00C0BB2A /* RootObject.m in Sources */,
 				ED2378B62060F79A00477997 /* BackgroundAudioVC.m in Sources */,
 				ED64C36C205F629600C0BB2A /* AppDelegate.m in Sources */,
