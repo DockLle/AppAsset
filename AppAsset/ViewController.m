@@ -105,6 +105,12 @@ static NSString *cellID = @"EVE";
             [[RootObject shareRootObject] openSafari];
         }
             break;
+        case 11:
+        {
+            UIViewController *vc = [NSClassFromString(@"FMBtnVC") new];
+            [self showViewController:vc sender:nil];
+        }
+            break;
         default:
             break;
     }
@@ -128,7 +134,8 @@ static NSString *cellID = @"EVE";
                                 @"后台播放音乐并在系统控制中心显示",
                                 @"获取通讯录",
                                 @"自由圆角",
-                                @"应用内使用Safari"]];
+                                @"应用内使用Safari",
+                                @"带图标文字的按钮（图标前后置）"]];
     }
     return _titleArray;
 }
@@ -149,7 +156,16 @@ static NSString *cellID = @"EVE";
     // Dispose of any resources that can be recreated.
 }
 
-
+- (BOOL)addSkipBackupAttributeToItemAtURL:(NSURL *)URL {
+    assert([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]);
+    NSError *error = nil;
+    BOOL success = [URL setResourceValue:[NSNumber numberWithBool: YES]                                   forKey: NSURLIsExcludedFromBackupKey error: &error];
+    if(!success){
+        NSLog(@"Error excluding %@ from backup %@", [URL lastPathComponent], error);
+    }
+    return success;
+    
+}
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"push1"]) {

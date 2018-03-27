@@ -12,7 +12,8 @@
 @import MediaPlayer;
 @interface BackgroundAudioVC ()
 
-@property (nonatomic,strong) AVAudioPlayer *player;
+@property (nonatomic,strong) AVURLAsset *asset;
+@property (nonatomic,strong) AVPlayer *player;
 @property (weak, nonatomic) IBOutlet UIButton *controlBtn;
 
 @end
@@ -24,9 +25,8 @@
     if (sender.selected) {
         
         [sender setTitle:@"暂停" forState:UIControlStateNormal];
-        if ([self.player play]) {
-            NSLog(@"播放中");
-        }
+        NSLog(@"播放中");
+        [self.player play];
     }
     else
     {
@@ -84,20 +84,66 @@
 
 -(void)setNowPlayingInfo
 {
+    NSMutableDictionary *dic = [self MusicInfoArray];
     NSMutableDictionary *songDict=[NSMutableDictionary dictionary];
     //歌名
-    [songDict setObject:@"再见" forKey:MPMediaItemPropertyTitle];
+    [songDict setObject:@"Let Her Go" forKey:MPMediaItemPropertyTitle];
     //歌手名
-    [songDict setObject:@"方一鸣" forKey:MPMediaItemPropertyArtist];
+    [songDict setObject:dic[@"artist"] forKey:MPMediaItemPropertyArtist];
     //歌曲的总时间
-    [songDict setObject:[NSNumber numberWithDouble:self.player.duration] forKeyedSubscript:MPMediaItemPropertyPlaybackDuration];
+    [songDict setObject:[NSNumber numberWithDouble:self.asset.duration.value / self.asset.duration.timescale] forKeyedSubscript:MPMediaItemPropertyPlaybackDuration];
     //设置歌曲图片
-    //    MPMediaItemArtwork *imageItem=[[MPMediaItemArtwork alloc]initWithImage:_singerImageView.image];
-    //    [songDict setObject:imageItem forKey:MPMediaItemPropertyArtwork];
+    MPMediaItemArtwork *imageItem=[[MPMediaItemArtwork alloc]initWithImage:[UIImage imageNamed:@"dog"]];
+    [songDict setObject:imageItem forKey:MPMediaItemPropertyArtwork];
     //设置控制中心歌曲信息
     
     [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:songDict];
 }
+
+- (NSMutableDictionary *)MusicInfoArray
+{
+    NSMutableDictionary *infoDict = [[NSMutableDictionary alloc] init];
+    for (NSString *format in [self.asset availableMetadataFormats]) {
+        
+//        [infoDict setObject:MusicName forKey:@"MusicName"];
+        NSLog(@"format type = %@",format);
+        for (AVMetadataItem *metadataItem in [self.asset metadataForFormat:format]) {
+            NSLog(@"commonKey = %@",metadataItem.commonKey);
+            
+            if ([metadataItem.commonKey isEqualToString:@"artwork"]) {
+                NSString *mime = [(NSDictionary *)metadataItem.value objectForKey:@"MIME"];
+                NSLog(@"mime: %@",mime);
+                
+                [infoDict setObject:mime forKey:@"artwork"];
+            }
+            else if([metadataItem.commonKey isEqualToString:@"title"])
+            {
+                NSString *title = (NSString *)metadataItem.value;
+                NSLog(@"title: %@",title);
+                
+                [infoDict setObject:title forKey:@"title"];
+            }
+            else if([metadataItem.commonKey isEqualToString:@"artist"])
+            {
+                NSString *artist = (NSString *)metadataItem.value;
+                NSLog(@"artist: %@",artist);
+                
+                [infoDict setObject:artist forKey:@"artist"];
+            }
+            else if([metadataItem.commonKey isEqualToString:@"albumName"])
+            {
+                NSString *albumName = (NSString *)metadataItem.value;
+                NSLog(@"albumName: %@",albumName);
+                
+                [infoDict setObject:albumName forKey:@"albumName"];
+            }
+        }
+        
+    }
+    
+    return infoDict;
+}
+
 
 - (void)__play
 {
@@ -115,15 +161,22 @@
 
 #pragma mark - getter
 
-- (AVAudioPlayer *)player
+- (AVURLAsset *)asset
+{
+    if (!_asset) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"Let Her Go" ofType:@"mp3"];
+        _asset = [AVURLAsset assetWithURL:[NSURL fileURLWithPath:path]];
+        
+    }
+    return _asset;
+}
+
+- (AVPlayer *)player
 {
     if (!_player) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"popo" ofType:@"mp3"];
         
-        _player = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:nil];
-        //    [player prepareToPlay];
-        [_player setVolume:1];
-        _player.numberOfLoops = -1;
+        _player = [[AVPlayer alloc] initWithPlayerItem:[AVPlayerItem playerItemWithAsset:self.asset]];
+        _player.volume = 1.0;
     }
     return _player;
 }

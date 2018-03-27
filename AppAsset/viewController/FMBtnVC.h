@@ -1,13 +1,13 @@
 //
-//  VedioToolBoxVC.h
+//  FMBtnVC.h
 //  AppAsset
 //
-//  Created by Wp on 2018/3/23.
+//  Created by Wp on 2018/3/26.
 //  Copyright © 2018年 Reo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface VedioToolBoxVC : UIViewController
+@interface FMBtnVC : UIViewController
 
 @end
