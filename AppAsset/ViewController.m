@@ -111,6 +111,11 @@ static NSString *cellID = @"EVE";
             [self showViewController:vc sender:nil];
         }
             break;
+        case 12:
+        {
+            [self performSegueWithIdentifier:@"missTheSun" sender:nil];
+        }
+            break;
         default:
             break;
     }
@@ -135,7 +140,8 @@ static NSString *cellID = @"EVE";
                                 @"获取通讯录",
                                 @"自由圆角",
                                 @"应用内使用Safari",
-                                @"带图标文字的按钮（图标前后置）"]];
+                                @"带图标文字的按钮（图标前后置）",
+                                @"音频队列"]];
     }
     return _titleArray;
 }
@@ -148,6 +154,8 @@ static NSString *cellID = @"EVE";
     // Do any additional setup after loading the view, typically from a nib.
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+    
+    
 }
 
 

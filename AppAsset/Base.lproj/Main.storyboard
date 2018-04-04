@@ -42,6 +42,7 @@
                         <segue destination="Qx4-c3-lFc" kind="show" identifier="push1" id="0RI-af-fY6"/>
                         <segue destination="Oxe-Tw-wGC" kind="show" identifier="pushForBgAudio" id="QEI-4G-fAV"/>
                         <segue destination="Yb3-RE-dwl" kind="show" identifier="pushForCorner" id="Rip-RZ-qaR"/>
+                        <segue destination="069-nq-Uwd" kind="show" identifier="missTheSun" id="Mgo-2N-2g5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -161,6 +162,69 @@
             </objects>
             <point key="canvasLocation" x="2895" y="304"/>
         </scene>
+        <!--Audio Tool BoxVC-->
+        <scene sceneID="q3z-gg-xnd">
+            <objects>
+                <viewController id="069-nq-Uwd" customClass="AudioToolBoxVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hEZ-il-pbF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJd-Sf-mQ3">
+                                <rect key="frame" x="155.5" y="523" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="O1U-x4-iPw"/>
+                                    <constraint firstAttribute="width" constant="64" id="WR7-Pa-T0V"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="xplay">
+                                    <color key="titleColor" red="0.99045771360397339" green="0.94819515943527222" blue="0.17134088277816772" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAudio:" destination="069-nq-Uwd" eventType="touchUpInside" id="S2J-ch-53r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-j9-hih">
+                                <rect key="frame" x="172" y="350" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="playAudio:" destination="069-nq-Uwd" eventType="touchUpInside" id="fQi-oX-A7J"/>
+                                    <action selector="startW:" destination="069-nq-Uwd" eventType="touchUpInside" id="Nxd-BW-fsQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AC8-A3-U8Z">
+                                <rect key="frame" x="75.5" y="535" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6tv-UB-mfl"/>
+                                    <constraint firstAttribute="width" constant="40" id="bs4-Qt-Be9"/>
+                                </constraints>
+                                <state key="normal" image="xprevious"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePa-96-I1T">
+                                <rect key="frame" x="259.5" y="535" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="EzS-94-8AV"/>
+                                    <constraint firstAttribute="height" constant="40" id="O0c-rX-ZLh"/>
+                                </constraints>
+                                <state key="normal" image="xnext"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lJd-Sf-mQ3" firstAttribute="leading" secondItem="AC8-A3-U8Z" secondAttribute="trailing" constant="40" id="L53-WY-bEV"/>
+                            <constraint firstItem="AC8-A3-U8Z" firstAttribute="centerY" secondItem="lJd-Sf-mQ3" secondAttribute="centerY" id="WQ8-wo-jJy"/>
+                            <constraint firstItem="ePa-96-I1T" firstAttribute="centerY" secondItem="lJd-Sf-mQ3" secondAttribute="centerY" id="YNO-Yz-iy0"/>
+                            <constraint firstItem="ePa-96-I1T" firstAttribute="leading" secondItem="lJd-Sf-mQ3" secondAttribute="trailing" constant="40" id="Zm8-WO-c2w"/>
+                            <constraint firstItem="lJd-Sf-mQ3" firstAttribute="centerX" secondItem="sJ7-LP-NMk" secondAttribute="centerX" id="fqw-t5-aDd"/>
+                            <constraint firstItem="sJ7-LP-NMk" firstAttribute="bottom" secondItem="lJd-Sf-mQ3" secondAttribute="bottom" constant="80" id="vWs-uB-Wo4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sJ7-LP-NMk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBY-jR-9Dn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2940" y="1140"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="pob-KF-TNv">
             <objects>
@@ -182,5 +246,8 @@
     </scenes>
     <resources>
         <image name="ball" width="200" height="199"/>
+        <image name="xnext" width="64" height="64"/>
+        <image name="xplay" width="64" height="64"/>
+        <image name="xprevious" width="64" height="64"/>
     </resources>
 </document>

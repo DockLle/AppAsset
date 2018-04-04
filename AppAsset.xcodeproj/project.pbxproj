@@ -21,6 +21,8 @@
 		ED2378B32060F1BC00477997 /* BrushBoardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2378B22060F1BC00477997 /* BrushBoardVC.m */; };
 		ED2378B62060F79A00477997 /* BackgroundAudioVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2378B52060F79A00477997 /* BackgroundAudioVC.m */; };
 		ED2378B92060FD1400477997 /* popo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED2378B82060FD1400477997 /* popo.mp3 */; };
+		ED2EB7E2206B296300F6ACC3 /* AudioToolBoxVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2EB7E1206B296300F6ACC3 /* AudioToolBoxVC.m */; };
+		ED2EB7E5206B2F5800F6ACC3 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2EB7E4206B2F5800F6ACC3 /* AudioPlayer.m */; };
 		ED64C36C205F629600C0BB2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64C36B205F629600C0BB2A /* AppDelegate.m */; };
 		ED64C36F205F629600C0BB2A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64C36E205F629600C0BB2A /* ViewController.m */; };
 		ED64C372205F629600C0BB2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED64C370205F629600C0BB2A /* Main.storyboard */; };
@@ -32,6 +34,7 @@
 		ED64C38C205FA26F00C0BB2A /* BallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64C38B205FA26F00C0BB2A /* BallViewController.m */; };
 		ED6BFBF42069F1DA00C5C2C0 /* Let Her Go.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ED6BFBF32069F1DA00C5C2C0 /* Let Her Go.mp3 */; };
 		EDA98CEC2061F78B005226B5 /* ContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA98CEB2061F78B005226B5 /* ContactsController.m */; };
+		EDB90270206CC0BC009EA986 /* HJBufferSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB9026F206CC0BC009EA986 /* HJBufferSlider.m */; };
 		EDED7A9D2068973900F6D76B /* YMBrushBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = EDED7A9C2068973900F6D76B /* YMBrushBoard.m */; };
 		EDED7AA02068986900F6D76B /* FMButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EDED7A9F2068986900F6D76B /* FMButton.m */; };
 		EDED7AA32068C0CA00F6D76B /* FMBtnVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EDED7AA22068C0CA00F6D76B /* FMBtnVC.m */; };
@@ -73,6 +76,10 @@
 		ED2378B42060F79A00477997 /* BackgroundAudioVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackgroundAudioVC.h; sourceTree = "<group>"; };
 		ED2378B52060F79A00477997 /* BackgroundAudioVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackgroundAudioVC.m; sourceTree = "<group>"; };
 		ED2378B82060FD1400477997 /* popo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = popo.mp3; sourceTree = "<group>"; };
+		ED2EB7E0206B296300F6ACC3 /* AudioToolBoxVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioToolBoxVC.h; sourceTree = "<group>"; };
+		ED2EB7E1206B296300F6ACC3 /* AudioToolBoxVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioToolBoxVC.m; sourceTree = "<group>"; };
+		ED2EB7E3206B2F5800F6ACC3 /* AudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		ED2EB7E4206B2F5800F6ACC3 /* AudioPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
 		ED64C367205F629600C0BB2A /* AppAsset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppAsset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED64C36A205F629600C0BB2A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ED64C36B205F629600C0BB2A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -92,6 +99,9 @@
 		ED6BFBF32069F1DA00C5C2C0 /* Let Her Go.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Let Her Go.mp3"; sourceTree = "<group>"; };
 		EDA98CEA2061F78B005226B5 /* ContactsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsController.h; sourceTree = "<group>"; };
 		EDA98CEB2061F78B005226B5 /* ContactsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsController.m; sourceTree = "<group>"; };
+		EDB9026E206CC0BB009EA986 /* HJBufferSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJBufferSlider.h; sourceTree = "<group>"; };
+		EDB9026F206CC0BC009EA986 /* HJBufferSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJBufferSlider.m; sourceTree = "<group>"; };
+		EDB90271206CC234009EA986 /* AssetPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetPrefixHeader.pch; sourceTree = "<group>"; };
 		EDED7A9B2068973900F6D76B /* YMBrushBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBrushBoard.h; sourceTree = "<group>"; };
 		EDED7A9C2068973900F6D76B /* YMBrushBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMBrushBoard.m; sourceTree = "<group>"; };
 		EDED7A9E2068986900F6D76B /* FMButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMButton.h; sourceTree = "<group>"; };
@@ -197,6 +207,7 @@
 				ED64C375205F629600C0BB2A /* LaunchScreen.storyboard */,
 				ED64C378205F629600C0BB2A /* Info.plist */,
 				ED64C379205F629600C0BB2A /* main.m */,
+				EDB90271206CC234009EA986 /* AssetPrefixHeader.pch */,
 			);
 			path = AppAsset;
 			sourceTree = "<group>";
@@ -210,6 +221,8 @@
 				ED64C384205F69AE00C0BB2A /* RootObject.m */,
 				ED64C386205F8ACA00C0BB2A /* CommonTool.h */,
 				ED64C387205F8ACA00C0BB2A /* CommonTool.m */,
+				ED2EB7E3206B2F5800F6ACC3 /* AudioPlayer.h */,
+				ED2EB7E4206B2F5800F6ACC3 /* AudioPlayer.m */,
 			);
 			path = coreU;
 			sourceTree = "<group>";
@@ -233,6 +246,8 @@
 				ED1EAF1F2063574800DC93FC /* CornerVC.m */,
 				EDED7AA12068C0CA00F6D76B /* FMBtnVC.h */,
 				EDED7AA22068C0CA00F6D76B /* FMBtnVC.m */,
+				ED2EB7E0206B296300F6ACC3 /* AudioToolBoxVC.h */,
+				ED2EB7E1206B296300F6ACC3 /* AudioToolBoxVC.m */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -240,6 +255,8 @@
 		EDED7A9A206896FD00F6D76B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EDB9026E206CC0BB009EA986 /* HJBufferSlider.h */,
+				EDB9026F206CC0BC009EA986 /* HJBufferSlider.m */,
 				EDED7A9B2068973900F6D76B /* YMBrushBoard.h */,
 				EDED7A9C2068973900F6D76B /* YMBrushBoard.m */,
 				EDED7A9E2068986900F6D76B /* FMButton.h */,
@@ -331,9 +348,11 @@
 				ED64C36F205F629600C0BB2A /* ViewController.m in Sources */,
 				ED2378A92060D8BB00477997 /* SRWebSocket.m in Sources */,
 				ED64C388205F8ACA00C0BB2A /* CommonTool.m in Sources */,
+				EDB90270206CC0BC009EA986 /* HJBufferSlider.m in Sources */,
 				EDED7AA02068986900F6D76B /* FMButton.m in Sources */,
 				ED64C37A205F629600C0BB2A /* main.m in Sources */,
 				EDED7A9D2068973900F6D76B /* YMBrushBoard.m in Sources */,
+				ED2EB7E5206B2F5800F6ACC3 /* AudioPlayer.m in Sources */,
 				EDED7AA32068C0CA00F6D76B /* FMBtnVC.m in Sources */,
 				ED2378B32060F1BC00477997 /* BrushBoardVC.m in Sources */,
 				ED1EAF202063574800DC93FC /* CornerVC.m in Sources */,
@@ -341,6 +360,7 @@
 				EDA98CEC2061F78B005226B5 /* ContactsController.m in Sources */,
 				ED64C385205F69AE00C0BB2A /* RootObject.m in Sources */,
 				ED2378B62060F79A00477997 /* BackgroundAudioVC.m in Sources */,
+				ED2EB7E2206B296300F6ACC3 /* AudioToolBoxVC.m in Sources */,
 				ED64C36C205F629600C0BB2A /* AppDelegate.m in Sources */,
 				ED64C38C205FA26F00C0BB2A /* BallViewController.m in Sources */,
 				ED2378052060B77B00477997 /* ChatViewController.m in Sources */,
@@ -485,6 +505,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AppAsset/vendor",
 				);
+				GCC_PREFIX_HEADER = AppAsset/AssetPrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/AppAsset/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Reo.AppAsset;
@@ -504,6 +525,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AppAsset/vendor",
 				);
+				GCC_PREFIX_HEADER = AppAsset/AssetPrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/AppAsset/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Reo.AppAsset;

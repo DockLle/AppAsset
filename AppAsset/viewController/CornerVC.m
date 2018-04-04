@@ -22,15 +22,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.image1 zy_cornerRadiusRoundingRect];
-    [self.image1 setImage:[UIImage imageNamed:@"dog"]];
+//    [self.image1 zy_cornerRadiusRoundingRect];
+//    [self.image1 setImage:[UIImage imageNamed:@"dog"]];
     
-    [self.image2 zy_cornerRadiusAdvance:20.f rectCornerType:UIRectCornerTopLeft | UIRectCornerBottomRight];
+    [self.image2 zy_cornerRadiusAdvance:0.f rectCornerType:UIRectCornerTopLeft | UIRectCornerBottomRight];
     [self.image2 zy_attachBorderWidth:5.f color:[UIColor blackColor]];
     [self.image2 setImage:[UIImage imageNamed:@"dog"]];
     
-    [self.image3 zy_cornerRadiusAdvance:40.f rectCornerType:UIRectCornerTopLeft | UIRectCornerTopRight];
-    [self.image3 setImage:[UIImage imageNamed:@"dog"]];
+//    [self.image3 zy_cornerRadiusAdvance:40.f rectCornerType:UIRectCornerTopLeft | UIRectCornerTopRight];
+//    [self.image3 setImage:[UIImage imageNamed:@"dog"]];
 }
 
 - (void)didReceiveMemoryWarning {
